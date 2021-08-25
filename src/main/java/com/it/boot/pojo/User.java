@@ -1,17 +1,35 @@
 package com.it.boot.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 
+@TableName("admin")
 public class User {
+    private Integer id;
     private String userName;
-    private String password;
+    private String userPassword;
 
     public User() {
     }
 
-    public User(String userName, String password) {
+    public User(Integer id, String userName, String userPassword) {
+        this.id = id;
         this.userName = userName;
-        this.password = password;
+        this.userPassword = userPassword;
+    }
+
+    public User(String userName, String userPassword){
+        this.userName=userName;
+        this.userPassword=userPassword;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -22,19 +40,20 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 '}';
     }
 }
