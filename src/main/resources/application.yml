@@ -53,3 +53,34 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
 
+
+# management   是所有actuator的配置
+management:
+  endpoints:
+    enabled-by-default: true   # 默认开启所有监控端点
+    web:
+      exposure:
+        include: '*'   # 以web方式暴露所有端点
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+
+    info:
+      enabled: true
+
+    beans:
+      enabled: true
+
+    metrics:
+      enabled: true
+
+info:
+  appName: boot-admin
+  appVersion: 1.0.0
+
+it:
+  hello:
+    prefix: it
+    suffix: 6666
+
