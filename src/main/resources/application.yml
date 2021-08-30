@@ -29,6 +29,15 @@ spring:
         enabled: true
         urlPattern: /*
         exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+#  redis:
+#    #url: redis://duhan:LANGhun0@r-bp1dyhztg3h1hicg33pd.redis.rds.aliyuncs.com:6379
+#    jedis:
+#      pool:
+#        max-active: 8
+#    host: r-bp1juozxsj6kqp8dd5pd.redis.rds.aliyuncs.com
+#    port: 6379
+#    password: duhan:LANGhun0
+
 
 
 
@@ -43,3 +52,4 @@ mybatis:
 
   configuration:
     map-underscore-to-camel-case: true
+

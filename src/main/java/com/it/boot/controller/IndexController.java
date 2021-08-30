@@ -3,6 +3,8 @@ package com.it.boot.controller;
 import com.it.boot.pojo.User;
 import com.it.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.redis.core.StringRedisTemplate;
+//import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,9 @@ public class IndexController {
 
     @Autowired
     UserService userService;
+
+//    @Autowired
+//    StringRedisTemplate redisTemplate;
 
 
     /*
@@ -63,6 +68,13 @@ public class IndexController {
 //            model.addAttribute("msg","请重新登录");
 //            return "login";
 //        }
+//        ValueOperations<String, String> opsForValue = redisTemplate.opsForValue();
+//
+//        String s = opsForValue.get("/main.html");
+//        String s1 = opsForValue.get("/sql");
+//
+//        model.addAttribute("mainCount",s);
+//        model.addAttribute("sqlCount",s1);
         return "main";
     }
 
